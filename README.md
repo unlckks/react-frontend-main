@@ -2,9 +2,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 
-For SMU software engineering, this is a template for frontend development.
-
-Author: [mingyun zhang](mingyunz@smu.edu)
 ## Available Scripts
 
 In the project directory, you can run:
