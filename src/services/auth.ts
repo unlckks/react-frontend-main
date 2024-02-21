@@ -2,7 +2,7 @@ import axios from "axios";
 const USER_API_URL = "http://localhost:9000/user/";
 //const USER_API_URL = "https://9429d5b9-a4ce-43d8-bf6b-637cc223febe.mock.pstmn.io/";
 // set API for RESET Passowrd  
-const USER_API_URL_RESET ="https://sde-backend-40b2c0bbfd8e.herokuapp.com/api/"
+//const USER_API_URL_RESET ="https://sde-backend-40b2c0bbfd8e.herokuapp.com/api/"
 
 const register = (username: string, email: string, password: string) => {
   return axios.post(USER_API_URL + "signup", {
@@ -37,7 +37,7 @@ const logout = () => {
 
 const resetPasswordRequest = (email: string) => {
   return axios
-    .post(USER_API_URL_RESET + 'password-reset-link', {
+    .post(USER_API_URL + 'password-reset-link', {
       email,
     })
     .then((response) => {
@@ -53,7 +53,7 @@ const resetPasswordRequest = (email: string) => {
 
 const resetPassword = async (token: string, password: string) => {
   try {
-    const response = await axios.post(USER_API_URL_RESET + 'password-reset/confirm', { token, password });
+    const response = await axios.post(USER_API_URL + 'password-reset/confirm', { token, password });
     return response.data.message;
   } catch (error) {
     //if token is not  invaild , 
