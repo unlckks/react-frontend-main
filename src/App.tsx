@@ -7,7 +7,7 @@ import ResetPasswordPage from './pages/login/ResetPasswordPage'
 import PasswordResetRequest from './pages/login/PasswordResetRequest';
 import Home from './pages/Home';
 import './stylesheets/App.css';
-// import { fakeAuthProvider } from "./auth";
+// import { fakeAuthProvider } from  "./auth";
 const App: React.FC = () => {
   return (
       <Router>
